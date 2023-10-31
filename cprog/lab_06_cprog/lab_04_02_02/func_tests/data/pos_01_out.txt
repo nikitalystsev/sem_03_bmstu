@@ -1,0 +1,6 @@
+Result: 
+hello yes
+i yes
+am no
+lystsev yes
+nikita yes

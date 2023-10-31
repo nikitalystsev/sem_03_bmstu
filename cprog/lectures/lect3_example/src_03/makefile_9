@@ -1,0 +1,37 @@
+# Слайд 31
+
+# Компилятор
+CC := gcc
+
+# Опции компиляции
+CFLAGS := -std=c99 -Wall -Werror -pedantic
+
+# Общие объектные файлы
+OBJS := hello.o bye.o
+
+# Все c-файлы 
+SRCS := $(wildcard *.c)
+
+greeting.exe : $(OBJS) main.o
+	$(CC) $^ -o $@
+
+test_greeting.exe : $(OBJS) test.o
+	$(CC) $^ -o $@
+
+%.o : %.c
+	$(CC) $(CFLAGS) -c $<
+
+%.d : %.c
+	$(CC) -M $< > $@
+
+run_test : test_greeting.exe
+	./test_greeting.exe
+	cd test_data
+	touch test.txt
+	cd ..
+
+include $(SRCS:.c=.d)
+
+.PHONY : clean
+clean :
+	$(RM) *.o *.exe *.d

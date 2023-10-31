@@ -1,0 +1,17 @@
+#!/usr/bin/gnuplot -persist
+reset
+NO_ANIMATION = 1
+
+set terminal svg size 1920, 1080
+set output 'linear_graph.svg'
+set size ratio 0.61803
+set size ratio 0.5625
+
+set xlabel "Number of elements, pcs"
+set ylabel "Time, ms"
+set grid 
+set title "Graphs of the dependence of the time of the subroutine on the size of the array"
+
+plot "./grap1/mysort.txt" with linespoints pt 5 lt rgb "red", \
+"./grap1/qsort.txt" with linespoints, \
+"./grap1/mysort_memcpy.txt" with linespoints

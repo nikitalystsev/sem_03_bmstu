@@ -1,0 +1,19 @@
+image: testing
+test:
+  tags:
+    - testing-docker
+  script:
+    - testing
+  artifacts:
+    paths: [report.txt.enc]
+    when: always
+rk_03:
+  image: gcc
+  stage: build
+  only:
+    - rk_03
+  script:
+    - cd rk_03
+    - make build
+    - make run
+    

@@ -1,0 +1,14 @@
+# Слайд 17 (.PHONY), слайд 18
+
+# Общие объектные файлы
+OBJS := hello.o bye.o
+
+greeting.exe : $(OBJS) main.o
+	$(CC) -o greeting.exe $(OBJS) main.o
+
+test_greeting.exe : $(OBJS) test.o
+	$(CC) -o test_greeting.exe $(OBJS) test.o
+
+.PHONY : clean
+clean :
+	$(RM) *.o *.exe

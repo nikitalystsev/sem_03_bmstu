@@ -1,0 +1,5 @@
+Result: 
+hello yes
+i no
+am no
+nikita yes

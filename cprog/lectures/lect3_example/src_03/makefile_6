@@ -1,0 +1,34 @@
+# Слайды 25, 26
+# Пример запуска, make -f makefile_6 mode=debug
+
+# Компилятор
+CC := gcc
+
+# Опции компиляции
+CFLAGS := -std=c99 -Wall -Werror -pedantic
+
+# Общие объектные файлы
+OBJS := hello.o bye.o
+
+ifeq ($(mode), debug)
+    # Отладочная сборка: добавим генерацию отладочной информации
+    CFLAGS += -g3
+endif
+
+ifeq ($(mode), release)
+    # Финальная сборка: исключим отладочную информацию и утверждения (asserts)
+    CFLAGS += -DNDEBUG -g0
+endif
+
+greeting.exe : $(OBJS) main.o
+	$(CC) $^ -o $@
+
+test_greeting.exe : $(OBJS) test.o
+	$(CC) $^ -o $@
+
+%.o : %.c *.h
+	$(CC) $(CFLAGS) -c $<
+
+.PHONY : clean
+clean :
+	$(RM) *.o *.exe
