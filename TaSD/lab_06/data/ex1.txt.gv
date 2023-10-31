@@ -1,0 +1,10 @@
+digraph my_tree {
+863 -> 368 [color=blue];
+863 -> 864 [color=red];
+368 -> 68 [color=blue];
+368 -> 832 [color=red];
+68 -> 206 [color=red];
+832 -> 464 [color=blue];
+464 -> 480 [color=red];
+864 -> 869 [color=red];
+}

@@ -1,0 +1,21 @@
+digraph my_tree {
+323 [label="323, h = 0"]290 [label="290, h = 0"]323 -> 290 [color=blue];
+323 [label="323, h = 0"]495 [label="495, h = 0"]323 -> 495 [color=red];
+290 [label="290, h = 0"]284 [label="284, h = 0"]290 -> 284 [color=blue];
+290 [label="290, h = 0"]322 [label="322, h = 0"]290 -> 322 [color=red];
+284 [label="284, h = 0"]211 [label="211, h = 0"]284 -> 211 [color=blue];
+211 [label="211, h = 0"]66 [label="66, h = 0"]211 -> 66 [color=blue];
+66 [label="66, h = 0"]39 [label="39, h = 0"]66 -> 39 [color=blue];
+66 [label="66, h = 0"]201 [label="201, h = 0"]66 -> 201 [color=red];
+201 [label="201, h = 0"]177 [label="177, h = 0"]201 -> 177 [color=blue];
+177 [label="177, h = 0"]103 [label="103, h = 0"]177 -> 103 [color=blue];
+103 [label="103, h = 0"]139 [label="139, h = 0"]103 -> 139 [color=red];
+139 [label="139, h = 0"]170 [label="170, h = 0"]139 -> 170 [color=red];
+322 [label="322, h = 0"]310 [label="310, h = 0"]322 -> 310 [color=blue];
+495 [label="495, h = 0"]475 [label="475, h = 0"]495 -> 475 [color=blue];
+475 [label="475, h = 0"]470 [label="470, h = 0"]475 -> 470 [color=blue];
+470 [label="470, h = 0"]446 [label="446, h = 0"]470 -> 446 [color=blue];
+446 [label="446, h = 0"]347 [label="347, h = 0"]446 -> 347 [color=blue];
+347 [label="347, h = 0"]402 [label="402, h = 0"]347 -> 402 [color=red];
+402 [label="402, h = 0"]404 [label="404, h = 0"]402 -> 404 [color=red];
+}

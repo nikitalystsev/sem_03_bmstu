@@ -1,0 +1,12 @@
+digraph my_tree {
+795 -> 366 [color=blue];
+795 -> 896 [color=red];
+366 -> 131 [color=blue];
+366 -> 705 [color=red];
+705 -> 417 [color=blue];
+417 -> 487 [color=red];
+487 -> 571 [color=red];
+571 -> 653 [color=red];
+896 -> 975 [color=red];
+975 -> 1000 [color=red];
+}
